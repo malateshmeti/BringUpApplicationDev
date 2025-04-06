@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Email Authentication</title>
+    <link rel="stylesheet" href="bringUpLoginPage.css" />
+</head>
+<body>
+<div class="container">
+    <div class="logo-container">
+        <img src="BringUp_Logo.webp" alt="Company Logo" class="logo" />
+        <h2>Email Authentication</h2>
+    </div>
+
+    <div id="emailSection">
+        <div class="input-group">
+            <span class="icon">📧</span>
+            <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="button-group">
+            <button id="registerBtn" onclick="sendOTP()">Register</button>
+
+            <button id="singInBtn" onclick="signIn()">Sign In</button>
+        </div>
+    </div>
+
+    <div id="otpSection" class="hidden">
+        <div class="input-group">
+            <span class="icon">🔑</span>
+            <input type="number" id="otp" placeholder="Enter OTP" required />
+        </div>
+        <button onclick="verifyOTP()">Verify OTP</button>
+    </div>
+
+    <p id="responseMessage"></p>
+</div>
+
+<div id="swinging-dots"></div>
+
+<script src="bringUpLoginPage.js"></script>
+</body>
+</html>
