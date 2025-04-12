@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Transaction</title>
+    <link rel="stylesheet" href="ElectricianMainModule.css">
+</head>
+<body>
+
+    <div id="AccountTransactionPage" class="ElectricianModuleContainer">
+        <!-- Header -->
+        <div class="ElectricianModuleHeader">Book Your Electric Service</div>
+
+        <!-- Form Section -->
+        <div class="ElectricianModule-container">
+
+            <div class="ElectricianModule-group">
+                <label>Name</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label>Phone No</label>
+                <input type="tel" placeholder= "" required >
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label>Address Type</label>
+                <input type="text" value="Service Address" disabled>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label for="priority">Available Services</label>
+                <select id="priority" name="priority" required>
+                  <option value="">-- Select Service --</option>
+                  <option value="AC Not Working">AC Not Working</option>
+                  <option value="Fan Not Working">Fan Not Working</option>
+                  <option value="TV Not Working">TV Not Working</option>
+                </select>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label for="priority">Priority Type</label>
+                <select id="priority" name="priority" required>
+                  <option value="">-- Select Priority --</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+            </div>
+              
+              <!-- Show this only when city is Other -->
+              <div class="ElectricianModule-group">
+                <label for="city">Main City</label>
+                <select id="city" onchange="filterAreas()" required>
+                  <option value="">-- Select City --</option>
+                  <option value="Hubli">Hubli</option>
+                  <option value="Dharwad">Dharwad</option>
+                </select>
+              </div>
+              
+              <div class="ElectricianModule-group">
+                <label for="area">Sub City</label>
+                <select id="area" onchange="checkOtherArea()" required>
+                  <option value="">-- Select Area --</option>
+                </select>
+              </div>
+              
+              <!-- Only visible if "Other" is selected in Sub City -->
+              <div class="ElectricianModule-group" id="customAreaDiv" style="display: none;">
+                <label for="customArea">Enter City Name</label>
+                <input type="text" id="customArea" placeholder="Enter Area / Locality" />
+              </div>
+              
+              <script>
+                const areaOptions = {
+                  Hubli: ["Gokul Road", "Vidyanagar", "Keshwapur", "Unkal", "BasveshwarNagar", "Other"],
+                  Dharwad: ["Jubilee Circle", "Malamaruti", "Line Bazar", "Narayanpur", "Other"]
+                };
+              
+                function filterAreas() {
+                  const city = document.getElementById("city").value;
+                  const areaDropdown = document.getElementById("area");
+                  const customAreaDiv = document.getElementById("customAreaDiv");
+              
+                  // Reset sub city and custom input
+                  areaDropdown.innerHTML = '<option value="">-- Select Area --</option>';
+                  customAreaDiv.style.display = "none";
+              
+                  if (city && areaOptions[city]) {
+                    areaOptions[city].forEach(area => {
+                      const option = document.createElement("option");
+                      option.value = area;
+                      option.textContent = area;
+                      areaDropdown.appendChild(option);
+                    });
+                  }
+                }
+              
+                function checkOtherArea() {
+                  const area = document.getElementById("area").value;
+                  const customAreaDiv = document.getElementById("customAreaDiv");
+              
+                  if (area === "Other") {
+                    customAreaDiv.style.display = "block";
+                  } else {
+                    customAreaDiv.style.display = "none";
+                  }
+                }
+              </script>
+                
+            <div class="ElectricianModule-group">
+                <label>Area/Street</label>
+                <input type="text" required>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label>Near By</label>
+                <input type="text" required>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label>House Name</label>
+                <input type="text" optional>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label>House No</label>
+                <input type="text" required>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label>Pin Code</label>
+                <input type="number" required>
+            </div>
+
+            <div class="ElectricianModule-group">
+                <label for="serviceDate">Date</label>
+                <input type="date" id="serviceDate" name="serviceDate" required>
+              </div>
+              
+              <div class="ElectricianModule-group">
+                <label for="serviceTime">Time</label>
+                <input type="time" id="serviceTime" name="serviceTime" required>
+              </div>
+              
+
+            <div class="ElectricianModule-group">
+                <label>Other</label>
+                <input type="text">
+            </div>
+           
+        </div>
+
+        <!-- Side Buttons -->
+        <div class="ElectricianModule-buttons">
+            <button>View</button>
+            <button>Add</button>
+            <button>Edit</button>
+            <button>Delete</button>
+            <button class="ElectricianModule-btn">Save</button>
+            <button class="ElectricianModule-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("popstate", function (event) {
+        console.log("Navigating back...");
+    });
+</script>   
+
+</body>
+</html>

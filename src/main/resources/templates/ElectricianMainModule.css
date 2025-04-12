@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Background */
+body {
+    background-color: lightcyan;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    padding-left: 40px; /* Optional: Add some padding */
+}
+
+
+
+/* General Reset */
+.ElectricianModuleContainer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    /* Smaller font for compact look */
+}
+
+/* Main Container */
+.ElectricianModuleContainer {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Header - Blue Bar */
+.ElectricianModuleHeader {
+    background-color: blue;
+    color: white;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Adjust form padding to move slightly left */
+.ElectricianModule-container {
+    background-color: #E6F2FF; /* Light Blue Background */
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding-left: 25px; /* Shift form slightly to the left */
+}
+
+
+/* Form Labels */
+.ElectricianModule-group {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px; /* Moves fields slightly left */
+}
+
+
+.ElectricianModule-group label {
+    font-weight: bold;
+    color: blue;
+    margin-bottom: 3px;
+}
+
+.ElectricianModule-group input,
+.ElectricianModule-group select {
+    width: 65%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: white;
+}
+
+/* Side Buttons */
+.ElectricianModule-buttons {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ElectricianModule-buttons button {
+    width: 100px;
+    padding: 9px;
+    background-color: lightgray;
+    color: black;
+    border: 1px solid gray;
+    cursor: pointer;
+    text-align: left;
+    font-size: 13px;
+}
+
+.ElectricianModule-buttons button:active,
+.ElectricianModule-buttons button:hover {
+    background-color: darkgray;
+}
+
+/* Highlighted Buttons */
+.ElectricianModule-btn {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.ElectricianModule-btn {
+    background-color: darkgray;
+    color: white;
+    font-weight: bold;
+}
