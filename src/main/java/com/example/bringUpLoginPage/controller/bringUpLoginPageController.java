@@ -1,9 +1,7 @@
 package com.example.bringUpLoginPage.controller;
 
 import com.example.bringUpLoginPage.service.bringUpLoginPageService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://localhost:63342")

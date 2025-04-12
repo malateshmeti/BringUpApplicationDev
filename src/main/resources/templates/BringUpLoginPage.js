@@ -38,7 +38,7 @@ async function signIn() {
       document.getElementById("responseMessage").textContent = "Sign In Success, Redirecting to Main Page..";
       document.getElementById("responseMessage").style.color = "green";
       setTimeout(() => {
-        window.location.href = "bringUpDashBoard.html";
+        window.location.href = "DashBoardPage.html";
       }, 2000);
     } else {
       document.getElementById("responseMessage").textContent = "Account not verified. Please register using OTP.";
@@ -137,7 +137,6 @@ async function sendOTP() {
   }
 }
 
-
 // Verify OTP
 async function verifyOTP() {
   const email = document.getElementById("email").value;
@@ -161,7 +160,7 @@ async function verifyOTP() {
 
     if (data.toLowerCase().includes("success")) {
       setTimeout(() => {
-        window.location.href = "bringUpDashBoard.html";
+        window.location.href = "DashBoardPage.html";
       }, 2000);
     }
 
@@ -170,3 +169,4 @@ async function verifyOTP() {
     document.getElementById("responseMessage").textContent = "Failed to verify OTP.";
   }
 }
+
