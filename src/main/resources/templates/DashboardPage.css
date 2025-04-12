@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*------------------------------------- General Reset --------------------------------*/
 body {
     font-family: Arial, sans-serif;
@@ -127,3 +128,134 @@ body {
     color: #660;
     margin-top : 10px;
 }
+=======
+/*------------------------------------- General Reset --------------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6F2FF;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+/*----------------------------------------- Dashboard --------------------------------*/
+.dashboard-navbar {
+    background-color: rgba(0, 123, 255, 0.85);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.dashboard-module {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 1rem;
+    padding: 1rem;
+    width: 260px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-module:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-module .module-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #17a2b8;
+}
+
+.dashboard-module .module-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+
+/*----------------------------------------- LOGO ------------------------------*/
+.logo-container {
+    position: absolute;
+    top: 0.5px;
+    right: 400px;
+    padding: 0px;
+}
+
+.logo-container img {
+    height: 60px; /* Adjust height as needed */
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+/*----------------------------------------- Labour SignIn ------------------------------*/
+
+.LabourSignIn {
+    position: absolute;
+    top: 10px;
+    left: 100px; /* Adjust as needed to position it beside the Logout button */
+}
+
+.LabourSignIn button {
+    padding: 5px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #59981A; /* Dark Blue */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.LabourSignIn button:hover {
+    background-color: #3D550C; /* Even darker blue on hover */
+}
+
+
+/*----------------------------------------- Logout Button ------------------------------*/
+.logout {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logout button {
+    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logout button:hover {
+    background-color: #d12b3f;
+}
+
+
+/*----------------------------------------- Footer ------------------------------*/
+
+.footer {
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #660;
+    margin-top : 10px;
+}
+>>>>>>> 3368c8e (DashBoardPage and Electrician Page added)
