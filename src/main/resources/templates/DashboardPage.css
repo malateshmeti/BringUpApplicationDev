@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*------------------------------------- General Reset --------------------------------*/
 body {
     font-family: Arial, sans-serif;
@@ -159,7 +158,6 @@ body {
 }
 
 .dashboard-module {
-    background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin: 1rem;
@@ -258,4 +256,3 @@ body {
     color: #660;
     margin-top : 10px;
 }
->>>>>>> 3368c8e (DashBoardPage and Electrician Page added)

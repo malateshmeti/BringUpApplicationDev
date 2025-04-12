@@ -5,6 +5,11 @@ function logout() {
     window.location.href = "BringUpLoginPage.html";
 }
 
+function LabourSignIn() {
+    // Redirect to login page       ---  Need to Develop SingIn for company and
+    window.location.href = "BringUpLoginPage.html";
+}
+
 function openModule(moduleName) {
     switch (moduleName) {
         case 'ElectricianMainModule':
